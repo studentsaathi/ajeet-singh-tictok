@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+	background-color:rgb(167, 102, 102);
+	
+}
+
+
+
+/* Settings grid layout for container and position
+auto template for center alignment
+*/
+.game-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    left: 10%;
+    top: 21%;
+    color: brown;
+
+}
+
+/* Settings for individual cells in grid
+user-select for disable text highlight
+*/
+.cell {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 85px;
+    padding: 5px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.restart {
+    font-size: 20px;
+    padding: 5px;
+    
+    width: 200px;
+    height: 40px;
+    
+    
+
+}
+.restart{
+    margin-top: 100%;
+    margin-left: 90px;
+}
+
+/* Remove outline border to look like an tic tac toe board
+*/
+#c00, #c01, #c02 {
+    border-top: none;
+}
+#c00, #c10, #c20 {
+    border-left: none;
+}
+#c02, #c12, #c22 {
+    border-right: none;
+}
+#c20, #c21, #c22 {
+    border-bottom: none;
+}
+
+
+    </style>
+   
+    <title>Ajeet singh</title>
+</head>
+
+<body  >
+<h1 style=" margin-left:14%; color: aliceblue;  " >Bala ji Family Game</h1><hr>
+
+<p style="margin-left: 120px;"> Play with:
+    <select onchange="AI=this.value">
+        <option value="false">Human</option>
+        <option value="true">Ajeet</option>
+    </select></p>
+	<hr>
+    <div class="game-container">
+        <div id="c00" class="cell"></div>
+        <div id="c01" class="cell"></div>
+        <div id="c02" class="cell"></div>
+        <div id="c10" class="cell"></div>
+        <div id="c11" class="cell"></div>
+        <div id="c12" class="cell"></div>
+        <div id="c20" class="cell"></div>
+        <div id="c21" class="cell"></div>
+        <div id="c22" class="cell"></div>
+		
+    </div>
+	
+	
+    <button class="restart" onclick="restart()" >Restart</button><hr>
+	
+	
+	
+   
+    <script src="./index.js"></script>
+</body>
+
+</html>
+!
